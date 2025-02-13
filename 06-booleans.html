@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Booleans</title>    
+  </head>
+  <body>
+    <script>
+      // console.log(3<5);
+      // //comparison operators are lowest in PEMDAS
+      // //acc logical operators are lower - &&
+
+      // //auto converts when checking 
+      // console.log(5 == '5.00');
+      // //will check types too
+      // console.log(5 === '5.00');
+
+      // if (true) {
+      //   console.log(true);
+      // } else {
+      //   console.log('else')
+      // }
+
+      if (5) { 
+        console.log('truthy');
+      }
+      //falsy values: false, 0, '', NaN , undefined, and null
+      //truthy values: every other value
+
+      //NaN - not a number (ex. 'text'/5 )
+
+
+      const result = true ? 'truthy' : 'falsy';
+      /*
+      Ternary Operator
+      shortcut for if else statement
+      ? is if
+      : is else
+
+      good for saving a value
+      */
+
+      false && console.log('hello');
+      /*
+      Guard Operator: can stop code early, so it wont run unless first value is true
+      */
+
+      const message = false && 'hello';
+      //message will = false
+      const message2 = 5 && 'hello';
+      //message2 == hello
+
+      const currency = 'EUR' || 'USD';
+      console.log(currency);
+      //sets a default value so in this case it will equal EUR
+      const currency2 = undefined || 'USD';
+      console.log(currency2);
+      //sets value of USD
+
+      //Default Operator
+
+
+    </script>
+  </body>
+</html>
+
+

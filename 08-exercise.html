@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Functions</title>    
+  </head>
+  <body>
+    <button onclick="playGame('heads')">heads</button>
+    <button onclick="playGame('tails')">tails</button>
+    <script>      
+      const score = JSON.parse(localStorage.getItem('score'));
+
+      function playGame(guess) {
+        const compMove = pickComputerMove();
+
+        console.log(compMove);
+        const result = compMove === guess ? 'You win!' : 'You lose.';
+
+        if (result === 'You win!') {
+          score.wins++;
+        } else if (result === 'You lose.') {
+          score.losses++;
+        }
+
+        localStorage.setItem('score', JSON.stringify(score));
+
+        alert(`You played ${guess}, the Computer played ${compMove}. ${result}
+Wins: ${score.wins}, Losses: ${score.losses}`);
+
+
+      }
+
+      //make the fucntion a verb
+      function pickComputerMove() {
+        const randomNumber = Math.random();
+
+        const compMove = randomNumber < 0.5 ? 'heads' : 'tails';
+
+        // if (randomNumber >= 0 && randomNumber < 1 / 2) {
+        //   compMove = 'heads';
+        // } else if (randomNumber >= 1 / 2 && randomNumber <= 1 ) { 
+        //   compMove = 'tails';
+        // } 
+
+        return compMove;
+      }
+
+    </script>
+  </body>
+</html>
+
+
