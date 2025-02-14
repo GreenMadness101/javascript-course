@@ -6,9 +6,39 @@
   </head>
   <body>
     <button>hello</button>
+    <button class="js-button">Second button</button>
     <script>
 
+      //first button in the page
+      console.log(document.querySelector('button'));
 
+      //every html element has innerHTML
+      console.log(document.querySelector('button').innerHTML);
+      document.querySelector('button').innerHTML = 'changed';
+
+      const buttonElement = document.querySelector('.js-button');
+      console.log(buttonElement);
+
+
+
+
+      /*
+      console.log(document.title);
+      document.title = 'changed';
+
+      //entire body html
+      console.log(document.body);
+      //it is an object
+      console.log(typeof document.body);
+
+      console.log(document.body.innerHTML);
+      document.body.innerHTML = '<buttom>hello</button>';
+      */
+
+      /*
+      document.body.innerHTML = 'hello';
+      document.title = 'Good job!';
+      */
     </script>
   </body>
 </html>
