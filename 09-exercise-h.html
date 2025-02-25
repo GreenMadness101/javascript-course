@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>DOM Exercise H</title>    
+  </head>
+  <body>
+    <input placeholder="Type something" class="js-input-box" onkeyup="updateText()">
+    <p class="js-text"></p>
+    <script>
+      function updateText() {
+        const inputElement = document.querySelector('.js-input-box');
+
+        document.querySelector('.js-text').innerHTML = inputElement.value;
+      }
+
+    </script>
+  </body>
+</html>
+
+
